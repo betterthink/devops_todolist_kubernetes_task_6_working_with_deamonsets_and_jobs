@@ -7,7 +7,7 @@
    kubectl apply -f daemonset.yml
    ```
 3. ```bash
-   kubectl aplly -f cronjob.yml
+   kubectl apply -f cronjob.yml
    ```
 ## Validation of the solution
 ### Daemonset:
@@ -19,14 +19,19 @@ kubectl get daemonset -n mateapp
 kubectl get cronjob -n mateapp
 ```
 ## Getting logs
+### Daemonset:
 ```bash
 kubectl get pods -n mateapp
 ```
-### Daemonset:
+
 ```bash
 kubectl logs <todoapp-server-(Daemonset)> -n mateapp
 ```
 ### CronJob:
+```bash
+kubectl get pods -n mateapp
+```
+
 ```bash
 kubectl logs <todoapp-server-(CronJob)> -n mateapp
 ```
