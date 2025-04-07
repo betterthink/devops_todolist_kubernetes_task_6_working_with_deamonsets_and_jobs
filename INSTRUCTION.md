@@ -20,18 +20,20 @@ kubectl get cronjob -n mateapp
 ```
 ## Getting logs
 ### Daemonset:
+Run this command to look up for pods:
 ```bash
 kubectl get pods -n mateapp
 ```
-
+Needed pod look like todoapp-server-< random_values >
 ```bash
-kubectl logs <todoapp-server-(Daemonset)> -n mateapp
+kubectl logs todoapp-server-<random_values> -n mateapp
 ```
 ### CronJob:
+Run this command to look up for pods:
 ```bash
 kubectl get pods -n mateapp
 ```
-
+Needed pod look like health-check-< random_values >
 ```bash
-kubectl logs <todoapp-server-(CronJob)> -n mateapp
+kubectl logs health-check-<random_values> -n mateapp
 ```
